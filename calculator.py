@@ -7,9 +7,11 @@ app.title("CalcPy")
 user_input = Entry(app, width =30)
 user_input.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
+
 # Operation Functions
-def numeric_button():
-    print("you pressed a numeric button")
+def numeric_button(n):
+    user_input.insert(0, n)
+
 
 
 def addition():
@@ -33,16 +35,16 @@ def clear():
 
 
 # Numeric Buttons
-button_0 = Button(app, text=" 0 ", padx=40, pady=20, command=numeric_button).grid(row=4, column=1)
-button_1 = Button(app, text=" 1 ", padx=40, pady=20, command=numeric_button).grid(row=3, column=0)
-button_2 = Button(app, text=" 2 ", padx=40, pady=20, command=numeric_button).grid(row=3, column=1)
-button_3 = Button(app, text=" 3 ", padx=40, pady=20, command=numeric_button).grid(row=3, column=2)
-button_4 = Button(app, text=" 4 ", padx=40, pady=20, command=numeric_button).grid(row=2, column=0)
-button_5 = Button(app, text=" 5 ", padx=40, pady=20, command=numeric_button).grid(row=2, column=1)
-button_6 = Button(app, text=" 6 ", padx=40, pady=20, command=numeric_button).grid(row=2, column=2)
-button_7 = Button(app, text=" 7 ", padx=40, pady=20, command=numeric_button).grid(row=1, column=0)
-button_8 = Button(app, text=" 8 ", padx=40, pady=20, command=numeric_button).grid(row=1, column=1)
-button_9 = Button(app, text=" 9 ", padx=40, pady=20, command=numeric_button).grid(row=1, column=2)
+button_0 = Button(app, text=" 0 ", padx=40, pady=20, command=lambda:numeric_button(0)).grid(row=4, column=1)
+button_1 = Button(app, text=" 1 ", padx=40, pady=20, command=lambda:numeric_button(1)).grid(row=3, column=0)
+button_2 = Button(app, text=" 2 ", padx=40, pady=20, command=lambda:numeric_button(2)).grid(row=3, column=1)
+button_3 = Button(app, text=" 3 ", padx=40, pady=20, command=lambda:numeric_button(3)).grid(row=3, column=2)
+button_4 = Button(app, text=" 4 ", padx=40, pady=20, command=lambda:numeric_button(4)).grid(row=2, column=0)
+button_5 = Button(app, text=" 5 ", padx=40, pady=20, command=lambda:numeric_button(5)).grid(row=2, column=1)
+button_6 = Button(app, text=" 6 ", padx=40, pady=20, command=lambda:numeric_button(6)).grid(row=2, column=2)
+button_7 = Button(app, text=" 7 ", padx=40, pady=20, command=lambda:numeric_button(7)).grid(row=1, column=0)
+button_8 = Button(app, text=" 8 ", padx=40, pady=20, command=lambda:numeric_button(8)).grid(row=1, column=1)
+button_9 = Button(app, text=" 9 ", padx=40, pady=20, command=lambda:numeric_button(9)).grid(row=1, column=2)
 
 # Operation Buttons
 button_add = Button(app, text=" + ", command=addition, padx=43, pady=23).grid(row=1, column=3, columnspan=1)
